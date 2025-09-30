@@ -1,0 +1,27 @@
+{
+  "name": "f.csa316",
+  "version": "1.0.0",
+  "description": "- Г.Есүүхэй /B222270026  (Product Owner) - Г.Ихбархасвад / B222270836 (Scrum Master) - Батбаатар / B200910808 (Developer) - Г.Есүхэй /B200910804 (Developer) - Х.Дүүрэнжаргал /B222270800 (Developer)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yesuukhei/F.CSA316.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/yesuukhei/F.CSA316/issues"
+  },
+  "homepage": "https://github.com/yesuukhei/F.CSA316#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
+"scripts": {
+  "test": "jest"
+}
