@@ -34,13 +34,6 @@ npm test lab6/donation.test.js
 ```bash
 # Branch үүсгэх
 git checkout -b feature/donation-list
-
-# Commit хийх
-git add lab6/
-git commit -m "feat: add donation list (PB-102)"
-
-# Push хийх
-git push origin feature/donation-list
 ```
 
 GitHub дээр Pull Request үүсгэх.

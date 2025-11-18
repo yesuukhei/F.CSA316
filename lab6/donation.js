@@ -102,12 +102,12 @@ class DonationList {
 
 if (require.main === module) {
   console.log("=".repeat(60));
-  console.log("🎯 ХАНДИВЫН СИСТЕМ - PB-102");
+  console.log("ХАНДИВЫН СИСТЕМ - PB-102");
   console.log("=".repeat(60));
 
   const donationList = new DonationList();
 
-  console.log("\n✨ Хандивын аян үүсгэж байна...\n");
+  console.log("\nХандивын аян үүсгэж байна...\n");
 
   const d1 = donationList.addDonation({
     title: "Хөгжлийн бэрхшээлтэй хүүхдүүдэд туслах",
@@ -116,7 +116,7 @@ if (require.main === module) {
     createdBy: "user-123",
     category: "боловсрол",
   });
-  console.log(`   ✅ Үүссэн: ${d1.title}`);
+  console.log(`    Үүссэн: ${d1.title}`);
 
   const d2 = donationList.addDonation({
     title: "Эмнэлгийн тусламж",
@@ -125,10 +125,10 @@ if (require.main === module) {
     createdBy: "user-456",
     category: "эрүүл мэнд",
   });
-  console.log(`   ✅ Үүссэн: ${d2.title}`);
+  console.log(`    Үүссэн: ${d2.title}`);
 
   console.log("\n" + "=".repeat(60));
-  console.log("📋 БҮХ ХАНДИВЫН АЯНУУД");
+  console.log("БҮХ ХАНДИВЫН АЯНУУД");
   console.log("=".repeat(60));
   
   const all = donationList.getAllDonations();
@@ -143,7 +143,7 @@ if (require.main === module) {
   });
 
   console.log("\n" + "=".repeat(60));
-  console.log("📊 СТАТИСТИК");
+  console.log("СТАТИСТИК");
   console.log("=".repeat(60));
   
   const stats = donationList.getStats();
@@ -154,7 +154,7 @@ if (require.main === module) {
   console.log(`   Нийт цугларсан дүн: ${stats.totalRaised.toLocaleString()}₮`);
   
   console.log("\n" + "=".repeat(60));
-  console.log("✅ Демо амжилттай дууслаа!");
+  console.log("Демо амжилттай дууслаа!");
   console.log("=".repeat(60) + "\n");
 }
 
