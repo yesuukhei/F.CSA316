@@ -101,35 +101,61 @@ class DonationList {
 }
 
 if (require.main === module) {
+  console.log("=".repeat(60));
+  console.log("🎯 ХАНДИВЫН СИСТЕМ - PB-102");
+  console.log("=".repeat(60));
+
   const donationList = new DonationList();
 
-  donationList.addDonation({
+  console.log("\n✨ Хандивын аян үүсгэж байна...\n");
+
+  const d1 = donationList.addDonation({
     title: "Хөгжлийн бэрхшээлтэй хүүхдүүдэд туслах",
     description: "Зургийн сургуулийн хэрэгсэл худалдан авах",
     targetAmount: 1000000,
     createdBy: "user-123",
-    category: "education",
+    category: "боловсрол",
   });
+  console.log(`   ✅ Үүссэн: ${d1.title}`);
 
-  donationList.addDonation({
+  const d2 = donationList.addDonation({
     title: "Эмнэлгийн тусламж",
     description: "Цочмог тусламж шаардлагатай өвчтөнд туслах",
     targetAmount: 5000000,
     createdBy: "user-456",
-    category: "health",
+    category: "эрүүл мэнд",
   });
+  console.log(`   ✅ Үүссэн: ${d2.title}`);
 
-  console.log("\n📋 Бүх хандивууд:");
+  console.log("\n" + "=".repeat(60));
+  console.log("📋 БҮХ ХАНДИВЫН АЯНУУД");
+  console.log("=".repeat(60));
+  
   const all = donationList.getAllDonations();
-  all.forEach((d) => {
-    console.log(`  - ${d.title} (${d.targetAmount}₮)`);
+  all.forEach((d, index) => {
+    console.log(`\n${index + 1}. ${d.title}`);
+    console.log(`   Тайлбар: ${d.description}`);
+    console.log(`   Зорилтот дүн: ${d.targetAmount.toLocaleString()}₮`);
+    console.log(`   Одоогийн дүн: ${d.currentAmount.toLocaleString()}₮`);
+    console.log(`   Ангилал: ${d.category}`);
+    console.log(`   Төлөв: ${d.status}`);
+    console.log(`   ID: ${d.id}`);
   });
 
-  console.log("\n📊 Статистик:");
+  console.log("\n" + "=".repeat(60));
+  console.log("📊 СТАТИСТИК");
+  console.log("=".repeat(60));
+  
   const stats = donationList.getStats();
-  console.log(`  Нийт аян: ${stats.total}`);
-  console.log(`  Идэвхтэй: ${stats.active}`);
-  console.log(`  Зорилтот дүн: ${stats.totalTarget}₮`);
+  console.log(`\n   Нийт аян: ${stats.total}`);
+  console.log(`   Идэвхтэй аян: ${stats.active}`);
+  console.log(`   Дууссан аян: ${stats.completed}`);
+  console.log(`   Нийт зорилтот дүн: ${stats.totalTarget.toLocaleString()}₮`);
+  console.log(`   Нийт цугларсан дүн: ${stats.totalRaised.toLocaleString()}₮`);
+  
+  console.log("\n" + "=".repeat(60));
+  console.log("✅ Демо амжилттай дууслаа!");
+  console.log("=".repeat(60) + "\n");
 }
 
 module.exports = { DonationList, createDonation };
