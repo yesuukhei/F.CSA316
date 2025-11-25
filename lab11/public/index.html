@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="mn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Нэвтрэх Систем</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header>
+        <h1>🔐 Нэвтрэх Систем</h1>
+        <div id="userInfo" class="user-info" style="display: none">
+          <span id="usernameDisplay"></span>
+          <button id="logoutBtn" class="btn btn-secondary">Гарах</button>
+        </div>
+      </header>
+
+      <!-- Navigation -->
+      <nav id="nav" class="nav">
+        <button class="nav-btn active" data-page="login">Нэвтрэх</button>
+        <button class="nav-btn" data-page="register">Бүртгүүлэх</button>
+        <button
+          class="nav-btn"
+          data-page="history"
+          id="historyNav"
+          style="display: none"
+        >
+          Нэвтрэх Түүх
+        </button>
+      </nav>
+
+      <!-- Main Content -->
+      <main>
+        <!-- Login Page -->
+        <div id="loginPage" class="page active">
+          <div class="card">
+            <h2>Нэвтрэх</h2>
+            <form id="loginForm">
+              <div class="form-group">
+                <label for="loginUsername">Хэрэглэгчийн нэр:</label>
+                <input type="text" id="loginUsername" required minlength="3" />
+              </div>
+              <div class="form-group">
+                <label for="loginPassword">Нууц үг:</label>
+                <input
+                  type="password"
+                  id="loginPassword"
+                  required
+                  minlength="6"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">Нэвтрэх</button>
+            </form>
+            <div id="loginMessage" class="message"></div>
+          </div>
+        </div>
+
+        <!-- Register Page -->
+        <div id="registerPage" class="page">
+          <div class="card">
+            <h2>Бүртгүүлэх</h2>
+            <form id="registerForm">
+              <div class="form-group">
+                <label for="registerUsername">Хэрэглэгчийн нэр:</label>
+                <input
+                  type="text"
+                  id="registerUsername"
+                  required
+                  minlength="3"
+                />
+                <small>Хамгийн багадаа 3 тэмдэгт</small>
+              </div>
+              <div class="form-group">
+                <label for="registerPassword">Нууц үг:</label>
+                <input
+                  type="password"
+                  id="registerPassword"
+                  required
+                  minlength="6"
+                />
+                <small>Хамгийн багадаа 6 тэмдэгт</small>
+              </div>
+              <div class="form-group">
+                <label for="registerEmail">Имэйл (сонголттой):</label>
+                <input type="email" id="registerEmail" />
+              </div>
+              <button type="submit" class="btn btn-primary">Бүртгүүлэх</button>
+            </form>
+            <div id="registerMessage" class="message"></div>
+          </div>
+        </div>
+
+        <!-- History Page -->
+        <div id="historyPage" class="page">
+          <div class="card">
+            <h2>Нэвтрэх Түүх</h2>
+            <div id="historyContent">
+              <div class="loading">Ачааллаж байна...</div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer>
+        <p>Лаб 11: Веб Хэрэглэгчийн Интерфейс</p>
+      </footer>
+    </div>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>
