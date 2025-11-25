@@ -1,11 +1,15 @@
 # Lab 6: Donation List (PB-102)
 
-## Багийн гишүүд
+## Lessons Learned
+- Pair Programming хэрхэн ажилладагийг сурсан
+- TDD аргыг хэрэгжүүлсэн
+- 7 функц, 7 тест амжилттай
+
+## Students
 - Driver: Г.Есүүхэй
 - Navigator: Г.Ихбархасвад
+- Reviewer: Х.Дүүрэнжаргал
 
-## Юу хийсэн бэ?
-Хандивийн жагсаалт харах функц (PB-102) - TDD аргаар хөгжүүлсэн
 
 ## Ажиллуулах
 
@@ -25,7 +29,7 @@ npm test lab6/donation.test.js
 5. getSortedDonations() - Эрэмбэлэх
 6. getStats() - Статистик харах
 7. updateDonationStatus() - Төлөв өөрчлөх
-
+l
 ## Тестүүд
 7 тест бичигдсэн - бүгд амжилттай ✅
 
