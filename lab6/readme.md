@@ -29,7 +29,7 @@ npm test lab6/donation.test.js
 5. getSortedDonations() - Эрэмбэлэх
 6. getStats() - Статистик харах
 7. updateDonationStatus() - Төлөв өөрчлөх
-
+l
 ## Тестүүд
 7 тест бичигдсэн - бүгд амжилттай ✅
 
